@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <title>Home</title>
     <link rel="stylesheet" href="styles.css">
     <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
@@ -26,9 +26,8 @@
             <div class="bookmark-set">
                 <div class="bookmark-title">Daily</div>
                 <div class="bookmark-inner-container">
-                    <a class="bookmark" href="https://inbox.google.com/" target="_blank">Inbox</a>
-                    <a class="bookmark" href="https://github.com/" target="_blank">Github</a>
-                    <a class="bookmark" href="https://drive.google.com/" target="_blank">Drive</a>
+                    <a class="bookmark" href="https://github.com/" target="_blank">GitHub</a>
+                    <a class="bookmark" href="https://my.edinboro.edu/" target="_blank">Edinboro</a>
                 </div>
             </div>
             <div class="bookmark-set">
@@ -36,27 +35,25 @@
                 <div class="bookmark-inner-container">
                     <a class="bookmark" href="https://youtube.com" target="_blank">Youtube</a>
                     <a class="bookmark" href="https://netflix.com" target="_blank">Netflix</a>
-                    <a class="bookmark" href="https://crunchyroll.com" target="_blank">Crunchyroll</a>
-                    <a class="bookmark" href="https://" target="_blank">Amazon Prime</a>
+                    <a class="bookmark" href="https://vrv.com" target="_blank">VRV</a>
+                    <a class="bookmark" href="https://Twitch.tv" target="_blank">Twitch</a>
                 </div>
             </div>
             <div class="bookmark-set">
             <div class="bookmark-title">Reddit</div>
                 <div class="bookmark-inner-container">
-                    <a class="bookmark" href="https://reddit.com/r/overwatch" target="_blank">/r/overwatch</a>
-                    <a class="bookmark" href="https://reddit.com/r/pcmasterrace" target="_blank">/r/pcmasterrace</a>
-                    <a class="bookmark" href="https://reddit.com/r/me_irl" target="_blank">/r/me_irl</a>
-                    <a class="bookmark" href="https://reddit.com/r/battlestations" target="_blank">/r/battlestations</a>
+                    <a class="bookmark" href="https://reddit.com/r/linux" target="_blank">/r/linux</a>
+                    <a class="bookmark" href="https://reddit.com/r/ChapoTrapHouse" target="_blank">/r/ChapoTrapHouse</a>
                     <a class="bookmark" href="https://reddit.com/r/unixporn" target="_blank">/r/unixporn</a>
-                    
                     <a class="bookmark" href="https://reddit.com/r/news" target="_blank">/r/news</a>
                 </div>
             </div>
             <div class="bookmark-set">
                 <div class="bookmark-title">Social</div>
                 <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://4chan.org/g/" target="_blank">/g/</a>
                     <a class="bookmark" href="https://twitter.com" target="_blank">Twitter</a>
-                    <a class="bookmark" href="https://facebook.com" target="_blank">Facebook</a>
+                    <a class="bookmark" href="https://linuxrocks.online" target="_blank">Mastodon</a>
                 </div>
             </div>
         </div>
@@ -77,16 +74,16 @@
                 sec = date.getSeconds(),
                 hour = date.getHours();
 
-            return "" + 
-                (hour < 10 ? ("0" + hour) : hour) + ":" + 
-                (min < 10 ? ("0" + min) : min) + ":" + 
+            return "" +
+                (hour < 10 ? ("0" + hour) : hour) + ":" +
+                (min < 10 ? ("0" + min) : min) + ":" +
                 (sec < 10 ? ("0" + sec) : sec);
         }
 
         window.onload = () => {
             let xhr = new XMLHttpRequest();
             // Request to open weather map
-            xhr.open('GET', 'http://api.openweathermap.org/data/2.5/weather?id=4737316&units=imperial&appid=e5b292ae2f9dae5f29e11499c2d82ece');
+            xhr.open('GET', 'api.openweathermap.org/data/2.5/weather?q=Edinboro,us&APPID=b7da7cd167779f28ff2e9f65f53c5402');
             xhr.onload = () => {
                 if (xhr.readyState === 4) {
                     if (xhr.status === 200) {
