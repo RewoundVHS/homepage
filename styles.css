@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('file:///home/neve/.cache/wal/colors.css');
 
 body {
-    background-color: #5F4B8B;
+	background-color: var(--color3) !important;
     margin: 0px;
 }
 
